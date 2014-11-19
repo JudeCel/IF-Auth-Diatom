@@ -1,0 +1,26 @@
+{
+	"name": "if-auth",
+	"version": "0.0.1",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"test": "tap tests/*.js"
+	},
+	"author": "InsiderFocus",
+	"license": "X11",
+	"dependencies": {
+		"async": "~0.2.7",
+		"lodash": "~1.2.1",
+		"if-common": "git+ssh://git@github.com:JudeCel/IF-Common-Diatom.git",
+		"if-data": "git+ssh://git@github.com:JudeCel/IF-Data-Diatom.git"
+	},
+	"devDependencies": {
+		"tap": "~0.4.3",
+		"grunt": "~0.4.1",
+		"grunt-contrib-watch": "~0.4.3",
+		"grunt-node-tap": "0.1.44",
+		"grunt-exec": "~0.4.1",
+		"grunt-contrib-clean": "~0.4.1",
+		"grunt-config": "~0.1.4"
+	}
+}
