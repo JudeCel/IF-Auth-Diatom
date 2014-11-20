@@ -22,8 +22,8 @@ function ValidateSession(params, mainCb) {
 		UNIX_TIMESTAMP(s.lastActivity) lastActivitySec, \
 		s.modified, \
 		s.Type, \
-		u.FirstName, \
-		u.LastName,\
+		u.name_first, \
+		u.name_last,\
 		u.Email, \
 		a.Status accountStatus, \
 		(IFNULL(s.expires, DATE_ADD(UTC_TIMESTAMP, INTERVAL 1 HOUR)) <= UTC_TIMESTAMP) sessionExpired \
