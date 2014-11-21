@@ -24,6 +24,7 @@ function ValidateSession(params, mainCb) {
 		s.Type, \
 		u.name_first, \
 		u.name_last,\
+		u.Status userStatus, \
 		u.Email, \
 		a.Status accountStatus, \
 		(IFNULL(s.expires, DATE_ADD(UTC_TIMESTAMP, INTERVAL 1 HOUR)) <= UTC_TIMESTAMP) sessionExpired \
@@ -37,10 +38,10 @@ function ValidateSession(params, mainCb) {
 	AND a.Deleted IS NULL";
 
 	var queryParams = [sessionId];
-	if (permissions.length > 0) {
-		sql += " AND u.permissions IN (?)";
-		queryParams.push(permissions);
-	}
+//	if (permissions.length > 0) {
+//		sql += " AND u.permissions IN (?)";
+//		queryParams.push(permissions);
+//	}
 
 	db.queryOne(sql, queryParams, function (err, result) {
 		console.log(err);
