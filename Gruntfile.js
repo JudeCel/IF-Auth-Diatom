@@ -43,7 +43,7 @@ module.exports = function (grunt) {
 		},
 
 		clean: {
-			mf_node_modules: ['<%= conf("dist_dir") %>/node_modules/mf-*'],
+			mf_node_modules: ['<%= conf("dist_dir") %>/node_modules/if-*'],
 			dist_dir: ['<%= conf("dist_dir") %>'],
 			dist_archive: ['<%= conf("dist_archive") %>']
 		},
