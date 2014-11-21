@@ -67,9 +67,9 @@ function ValidateSession(params, mainCb) {
 		if (~inactiveAccountStatuses.indexOf(result.accountStatus))
 			return mainCb('account_inactive', result);
 
-//		updateLastActivity(result.sessionId, function(err) {
-//			mainCb(err, result)
-//		});
+		updateLastActivity(result.sessionId, function(err) {
+			mainCb(err, result)
+		});
 	});
 
 	function handleExpiredSession(sessionId) {
@@ -79,12 +79,12 @@ function ValidateSession(params, mainCb) {
 		});
 	}
 
-//	function updateLastActivity(sessionId, cb) {
-//		var sql = "UPDATE sess \
-//		SET lastActivity = UTC_TIMESTAMP \
-//		WHERE id = ?";
-//
-//		db.query(sql, [sessionId], cb);
-//	}
+	function updateLastActivity(sessionId, cb) {
+		var sql = "UPDATE sess \
+		SET lastActivity = UTC_TIMESTAMP \
+		WHERE id = ?";
+
+		db.query(sql, [sessionId], cb);
+	}
 };
 module.exports = ValidateSession;
