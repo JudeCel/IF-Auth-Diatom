@@ -1,6 +1,6 @@
 "use strict";
 module.exports = {
-	domainToAccountId: require('./handlers/domainToAccountId.js'),
+	login: require('./handlers/login.js'),
 	createSession: require('./handlers/createSession.js'),
 	validateSession: require('./handlers/validateSession.js'),
 	validUserHelper: require('./handlers/validUserHelper.js'),
