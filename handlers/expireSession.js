@@ -10,7 +10,7 @@ function expireSession(sessionIdEncrypted) {
 	var sql = "UPDATE sess \
 			SET expires = NOW(),\
 			deleted = NOW(), \
-			status = 123000200 \
+			status = 100000100 \
 			WHERE id = ?";
 
 	return Q.nfcall(db.query, sql, [sessId]);
