@@ -15,7 +15,6 @@ function Login(params, cb) {
 		u.id userId, \
 		u.accountId, \
 		u.passwordCrypt, \
-		u.permissions, \
 		u.email = a.ownerEmail accountOwner, \
 		u.email, \
 		u.status userStatus, \
