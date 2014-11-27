@@ -3,12 +3,11 @@ var _ = require('lodash');
 var ifData = require('if-data'), db = ifData.db;
 var ifCommon = require('if-common');
 var mtypes = ifCommon.mtypes;
-var arrayHelper = ifCommon.utils.arrayHelper;
 
 function ValidateSession(params, mainCb) {
 	params = params || {};
 	var sessionId = params.sessionId;
-	var permissions = params.permissions || [];
+	var userType = params.userType || [];
 	//var sessionInactivityExpirationMinutes = params.sessionInactivityExpirationMinutes;
 
 	if (!params || !params.sessionId)
