@@ -31,7 +31,7 @@ function ValidateSession(params, mainCb) {
 	JOIN account a ON a.ID = s.AccountID \
 	JOIN users u ON u.ID = s.UserID \
 	WHERE s.ID = ? \
-	AND s.Status = 123000100 /*Valid*/ \
+	AND s.Status = 100000200 /*Valid*/ \
 	AND s.Deleted IS NULL \
 	AND u.Deleted IS NULL \
 	AND a.Deleted IS NULL";
