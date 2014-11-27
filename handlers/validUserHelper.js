@@ -47,12 +47,11 @@ function ValidUserHelper() {
 
 	function userAndAccountAreValid(user, cb) {
 		var inactiveAccountStatuses = [
-			mtypes.accountStatus.administrativeDisableDEPRECIATED,
 			mtypes.accountStatus.cancelled,
 			mtypes.accountStatus.nonPayment,
 			mtypes.accountStatus.trialExpired
 		];
-		if (user.permissions == mtypes.userPermissions.administrator) {
+		if (user.type == mtypes.userType.accountManager) {
 			inactiveAccountStatuses = [
 				mtypes.accountStatus.administrativeDisableDEPRECIATED
 			];
