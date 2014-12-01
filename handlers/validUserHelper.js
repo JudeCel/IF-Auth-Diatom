@@ -51,7 +51,7 @@ function ValidUserHelper() {
 			mtypes.accountStatus.nonPayment,
 			mtypes.accountStatus.trialExpired
 		];
-		if (user.type == mtypes.userType.accountManager) {
+		if (user.type == mtypes.userRole.accountManager) {
 			inactiveAccountStatuses = [
 				mtypes.accountStatus.administrativeDisableDEPRECIATED
 			];
