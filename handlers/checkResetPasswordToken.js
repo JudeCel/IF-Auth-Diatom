@@ -9,7 +9,7 @@ function CheckResetPasswordToken(params, cb) {
 
 	var sql = "SELECT \
 			email, COUNT(id) > 0 tokenValid, \
-		  (DATE_ADD(expirationDate, INTERVAL 8 HOUR) <= UTC_TIMESTAMP) as passwordExpired \
+		  (DATE_ADD(expirationDate, INTERVAL 1 HOUR) <= UTC_TIMESTAMP) as passwordExpired \
 		FROM forgotpasswordrequest  \
 		WHERE token = ? AND deleted IS NULL ";
 
