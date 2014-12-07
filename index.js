@@ -5,5 +5,7 @@ module.exports = {
 	validateSession: require('./handlers/validateSession.js'),
 	expireSession: require('./handlers/expireSession.js'),
 	validUserHelper: require('./handlers/validUserHelper.js'),
-	createForgotPasswordRequest: require('./handlers/createForgotPasswordRequest.js')
+	createForgotPasswordRequest: require('./handlers/createForgotPasswordRequest.js'),
+  checkResetPasswordToken: require('./handlers/checkResetPasswordToken.js'),
+  resetPassword: require('./handlers/resetPassword.js')
 };

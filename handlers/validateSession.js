@@ -7,7 +7,7 @@ var mtypes = ifCommon.mtypes;
 function ValidateSession(params, mainCb) {
 	params = params || {};
 	var sessionId = params.sessionId;
-	var userRole = params.userRole || [];
+	var userType = params.userType || [];
 	//var sessionInactivityExpirationMinutes = params.sessionInactivityExpirationMinutes;
 
 	if (!params || !params.sessionId)

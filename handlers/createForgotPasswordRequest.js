@@ -9,9 +9,8 @@ function CreateForgotPasswordRequest(params, cb) {
 
 	var request = _.defaults(params, {
 		email: params.email,
-		expirationDate: dateHelper.getResetPasswordExpirationDate(),
+		expirationDate: db.utcNow(),
 		token: guidHelper.generateUUID()
-
 	});
 	db.insert("forgotpasswordrequest", request, function (err, res) {
 		if (err) return cb(err);
